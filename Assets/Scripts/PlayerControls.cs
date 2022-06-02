@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
     public Camera cam;
     public GameObject player;
     public float speed = 10.0f;
+    public float lookSpeed = 10.0f;
 
     void Start()
     {
@@ -42,14 +43,14 @@ public class PlayerControls : MonoBehaviour
         // detect mouse movement and rotate the player
         if (Input.GetAxis("Mouse X") > 0)
         {
-            player.transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
-            cam.transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
+            player.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
+            cam.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
         }
 
         if (Input.GetAxis("Mouse X") < 0)
         {
-            player.transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
-            cam.transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed);
+            player.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
+            cam.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
         }
     }
 }
