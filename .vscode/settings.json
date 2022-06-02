@@ -54,5 +54,6 @@
     },
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "file:///d%3A/Unity%20Projects/Coding%20Club%20Game/.github/workflows/build.yml"
-    }
+    },
+    "nuxt.isNuxtApp": false
 }
