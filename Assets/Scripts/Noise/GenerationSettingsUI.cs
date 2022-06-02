@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if (UNITY_EDITOR) 
 [CustomEditor(typeof(GenerationSettings))]
 public class GenerationSettingsUI : Editor
 {
@@ -54,3 +55,4 @@ public class GenerationSettingsUI : Editor
         return w;
     }
 }
+#endif
