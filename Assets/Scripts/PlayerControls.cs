@@ -137,19 +137,6 @@ public class PlayerControls : MonoBehaviour
                 wantedVelocity.y = 0;
             }
 
-<<<<<<< HEAD
-        // detect mouse movement and rotate the player
-        if (Input.GetAxis("Mouse X") > 0)
-        {
-            player.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
-            cam.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
-        }
-
-        if (Input.GetAxis("Mouse X") < 0)
-        {
-            player.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
-            cam.transform.rotation += new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * lookSpeed, 0.0f, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * lookSpeed);
-=======
             velocity = new Vector2(
                 Mathf.MoveTowards(velocity.x, wantedVelocity.x, acceleration.x * Time.deltaTime),
                 Mathf.MoveTowards(velocity.y, wantedVelocity.y, acceleration.y * Time.deltaTime));
@@ -163,7 +150,6 @@ public class PlayerControls : MonoBehaviour
             {
                 cam.transform.localPosition = new Vector3(0, 1.5f, 0);
             }
->>>>>>> e87fef62d26c2769c057ab9e6f866bbfdb982424
         }
     }
 }
